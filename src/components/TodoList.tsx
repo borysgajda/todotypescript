@@ -8,8 +8,7 @@ interface Props{
     setInputs: React.Dispatch<React.SetStateAction<Todo[]>>;
   }
 
-  const TodoList: React.FC<Props> = ({inputs, setInputs}) => {
-    return (
+  const TodoList: React.FC<Props> = ({inputs, setInputs}) => 
     <div className="todos">
         {inputs.map(todo => (
             <SingleTodo todo={todo} key={todo.id}
@@ -17,7 +16,5 @@ interface Props{
             setInputs={setInputs}/>
         ))}
     </div>
-  )
-}
 
 export default TodoList;
