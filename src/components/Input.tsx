@@ -12,7 +12,6 @@ const Input = ({ todo, setTodo, Add }: Props) => {
     onSubmit={(e) => {Add(e); inputRef.current?.blur();}}>
       <input
         ref ={inputRef}
-        type="input"
         placeholder="Wpisz swoje zadanie"
         className="input--box"
         value={todo}
@@ -24,5 +23,4 @@ const Input = ({ todo, setTodo, Add }: Props) => {
     </form>
   );
 };
-
 export default Input;
