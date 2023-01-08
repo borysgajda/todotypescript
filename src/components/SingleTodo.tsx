@@ -38,16 +38,18 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
 
   return (
     <form className="todos--single" onSubmit={(e) => Edit(e, todo.id)}>
-      {edit ? (
+      {edit && ! todo.isDone && (
         <input
-          value={editTodo}
-          onChange={(e) => setEditTodo(e.target.value)}
-          className="todos--single--text"
-          ref={inputRef}
-        />
-      ) : todo.isDone ? (
+        value={editTodo}
+        onChange={(e) => setEditTodo(e.target.value)}
+        className="todos--single--text"
+        ref={inputRef}
+      />
+      )}
+      {!edit &&  todo.isDone && (
         <s className="todos--single--text">{todo.todo}</s>
-      ) : (
+      )}
+      {!edit && !todo.isDone && (
         <span className="todos--single--text">{todo.todo}</span>
       )}
       <div>

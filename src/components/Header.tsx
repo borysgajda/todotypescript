@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export default function Header() {
+export const Header = () => {
   const newDate = useRef(new Date());
   const [currentDay, setCurrentDay] = useState(newDate.current.getDate());
   const [currentMonth, setCurrentMonth] = useState(newDate.current.getMonth());
@@ -20,18 +20,12 @@ export default function Header() {
   const getMonthName = () => {
     const month = [
       "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",];
-    return month[monthIndex];
+    return month[monthIndex - 4];
   };
   const dayName = getDayName(dayIndex);
   const monthName = getMonthName();
-  const day = `${currentDay}`;
-  const month = `${currentMonth + 1}`;
+  const day = `${currentDay + 1}`;
   const year = `${currentYear}`;
-  useEffect(() => {
-    console.log(day);
-    console.log(month);
-    console.log(year);
-  });
   return (
     <header className="header">
       <h1 className="header--title">{day}</h1>
@@ -40,5 +34,4 @@ export default function Header() {
         <img src="calendar.png" className="header--image" alt="Calendar" />
       </h4>
     </header>
-  );
-}
+  );}
