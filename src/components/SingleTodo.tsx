@@ -2,6 +2,46 @@ import React, { useEffect, useRef, useState } from "react";
 import { Todo } from "../model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
+import styled from "styled-components";
+
+const Single = styled.form`
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+  }
+`;
+const ISingleText = styled.input`
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+const SingleText = styled.span`
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const Icon = styled.span`
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+`;
 
 type Props = {
   todo: Todo;
@@ -37,24 +77,18 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
   };
 
   return (
-    <form className="todos--single" onSubmit={(e) => Edit(e, todo.id)}>
-      {edit && ! todo.isDone && (
-        <input
-        value={editTodo}
-        onChange={(e) => setEditTodo(e.target.value)}
-        className="todos--single--text"
-        ref={inputRef}
-      />
+    <Single onSubmit={(e) => Edit(e, todo.id)}>
+      {edit && !todo.isDone && (
+        <ISingleText
+          value={editTodo}
+          onChange={(e) => setEditTodo(e.target.value)}
+          ref={inputRef}
+        />
       )}
-      {!edit &&  todo.isDone && (
-        <s className="todos--single--text">{todo.todo}</s>
-      )}
-      {!edit && !todo.isDone && (
-        <span className="todos--single--text">{todo.todo}</span>
-      )}
+      {!edit && todo.isDone && <SingleText>{todo.todo}</SingleText>}
+      {!edit && !todo.isDone && <SingleText>{todo.todo}</SingleText>}
       <div>
-        <span
-          className="icon"
+        <Icon
           onClick={() => {
             if (!edit && !todo.isDone) {
               setEdit(!edit);
@@ -62,15 +96,15 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
           }}
         >
           <AiFillEdit />
-        </span>
-        <span className="icon" onClick={() => Delete(todo.id)}>
+        </Icon>
+        <Icon onClick={() => Delete(todo.id)}>
           <AiFillDelete />
-        </span>
-        <span className="icon" onClick={() => Done(todo.id)}>
+        </Icon>
+        <Icon onClick={() => Done(todo.id)}>
           <MdDone />
-        </span>
+        </Icon>
       </div>
-    </form>
+    </Single>
   );
 };
 
