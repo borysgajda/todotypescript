@@ -1,30 +1,5 @@
 import React, { useRef } from "react";
-import Button from "./styled/button";
-import styled from "styled-components";
-import Boxx from "./styled/box";
-
-const Box = styled.input`
-  width: 100%;
-  border-radius: 50px;
-  padding: 20px 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 25px;
-  border: none;
-  transition: 0.2s;
-  box-shadow: inset 0 0 5px black;
-
-  &:focus {
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-    outline: none;
-  }
-`;
-const Innput = styled.form`
-  display: flex;
-  width: 47.5%;
-  position: relative;
-  align-items: center;
-`;
+import * as S from "../styled";
 
 interface Props {
   todo: string;
@@ -34,13 +9,13 @@ interface Props {
 const Input = ({ todo, setTodo, Add }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   return (
-    <Innput
+    <S.Input
       onSubmit={(e: React.FormEvent<Element>) => {
         Add(e);
         inputRef.current?.blur();
       }}
     >
-      <Box
+      <S.Box
         ref={inputRef}
         placeholder="Wpisz swoje zadanie"
         value={todo}
@@ -48,8 +23,8 @@ const Input = ({ todo, setTodo, Add }: Props) => {
           setTodo(e.target.value)
         }
       />
-      <Button />
-    </Innput>
+      <S.Button>+</S.Button>
+    </S.Input>
   );
 };
 export default Input;

@@ -3,18 +3,7 @@ import { Todo } from "./model";
 import TodoList from "./components/TodoList";
 import Input from "./components/Input";
 import { Header } from "./components/Header";
-import styled from "styled-components";
-
-const Appa = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  font-family: "Montserrat", sans-serif;
-`;
+import * as S from "./styled"
 
 const App: FC = () => {
   const [todo, setTodo] = useState<string>(" ");
@@ -34,11 +23,11 @@ const App: FC = () => {
     }
   };
   return (
-    <Appa>
+    <S.Container>
       <Header />
       <Input todo={todo} setTodo={setTodo} Add={Add} />
       <TodoList inputs={inputs} setInputs={setInputs} />
-    </Appa>
+    </S.Container>
   );
 };
 export default App;

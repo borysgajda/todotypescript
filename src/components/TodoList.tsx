@@ -1,15 +1,7 @@
 import React from "react";
 import { Todo } from "../model";
 import SingleTodo from "./SingleTodo";
-import styled from "styled-components";
-
-const Todos = styled.div`
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  width: 47.5%;
-  padding: 15px;
-`;
+import * as S from "../styled"
 
 interface Props {
   inputs: Todo[];
@@ -17,7 +9,7 @@ interface Props {
 }
 
 const TodoList: React.FC<Props> = ({ inputs, setInputs }) => (
-  <Todos>
+  <S.Todos>
     {inputs.map((todo) => (
       <SingleTodo
         todo={todo}
@@ -26,7 +18,7 @@ const TodoList: React.FC<Props> = ({ inputs, setInputs }) => (
         setInputs={setInputs}
       />
     ))}
-  </Todos>
+  </S.Todos>
 );
 
 export default TodoList;

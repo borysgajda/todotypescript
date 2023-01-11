@@ -2,46 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Todo } from "../model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
-import styled from "styled-components";
-
-const Single = styled.form`
-  display: flex;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 15px;
-  transition: 0.2s;
-
-  &:hover {
-    box-shadow: 0 0 5px black;
-    transform: scale(1.03);
-  }
-`;
-const ISingleText = styled.input`
-  flex: 1;
-  padding: 5px;
-  border: none;
-  font-size: 20px;
-
-  &:focus {
-    outline: none;
-  }
-`;
-const SingleText = styled.span`
-  flex: 1;
-  padding: 5px;
-  border: none;
-  font-size: 20px;
-
-  &:focus {
-    outline: none;
-  }
-`;
-
-const Icon = styled.span`
-  margin-left: 10px;
-  font-size: 25px;
-  cursor: pointer;
-`;
+import * as S from "../styled"
 
 type Props = {
   todo: Todo;
@@ -64,11 +25,11 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
     );
     setEdit(false);
   };
-  const Delete = (id: number) => {
+  const markAsDeleted = (id: number) => {
     setInputs(inputs.filter((todo) => todo.id !== id));
   };
 
-  const Done = (id: number) => {
+  const markAsDone = (id: number) => {
     setInputs(
       inputs.map((todo) =>
         todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
@@ -77,18 +38,18 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
   };
 
   return (
-    <Single onSubmit={(e) => Edit(e, todo.id)}>
+    <S.Single onSubmit={(e) => Edit(e, todo.id)}>
       {edit && !todo.isDone && (
-        <ISingleText
+        <S.InputSingleText
           value={editTodo}
           onChange={(e) => setEditTodo(e.target.value)}
           ref={inputRef}
         />
       )}
-      {!edit && todo.isDone && <SingleText>{todo.todo}</SingleText>}
-      {!edit && !todo.isDone && <SingleText>{todo.todo}</SingleText>}
+      {!edit && todo.isDone && <S.SingleText>{todo.todo}</S.SingleText>}
+      {!edit && !todo.isDone && <S.SingleText>{todo.todo}</S.SingleText>}
       <div>
-        <Icon
+        <S.Icon
           onClick={() => {
             if (!edit && !todo.isDone) {
               setEdit(!edit);
@@ -96,15 +57,15 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
           }}
         >
           <AiFillEdit />
-        </Icon>
-        <Icon onClick={() => Delete(todo.id)}>
+        </S.Icon>
+        <S.Icon onClick={() => markAsDeleted(todo.id)}>
           <AiFillDelete />
-        </Icon>
-        <Icon onClick={() => Done(todo.id)}>
+        </S.Icon>
+        <S.Icon onClick={() => markAsDone(todo.id)}>
           <MdDone />
-        </Icon>
+        </S.Icon>
       </div>
-    </Single>
+    </S.Single>
   );
 };
 
