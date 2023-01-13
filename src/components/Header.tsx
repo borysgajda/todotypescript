@@ -7,7 +7,6 @@ export const Header = () => {
   const [currentDay, setCurrentDay] = useState(newDate.current.getDate());
   const [currentMonth, setCurrentMonth] = useState(newDate.current.getMonth());
   const [currentYear, setCurrentYear] = useState(newDate.current.getFullYear());
-
   const dayIndex = new Date().getDay();
   const getDayName = (dayIndex: number) => {
     const days = [
