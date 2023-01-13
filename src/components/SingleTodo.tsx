@@ -68,4 +68,5 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
     </S.Single>
   );
 };
+
 export default SingleTodo;
