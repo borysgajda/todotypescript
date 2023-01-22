@@ -20,4 +20,5 @@ const TodoList: React.FC<Props> = ({ inputs, setInputs }) => (
     ))}
   </S.Todos>
 );
+
 export default TodoList;

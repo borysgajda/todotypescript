@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Navigation = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   font-family: "Montserrat", sans-serif;
@@ -105,6 +104,17 @@ export const InputSingleText = styled.input`
 `;
 
 export const SingleText = styled.span`
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const SingleTextStriked = styled.s`
   flex: 1;
   padding: 5px;
   border: none;
