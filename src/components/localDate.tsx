@@ -20,7 +20,7 @@ export const LocalDate = () => {
     ];
     return days[dayIndex];
   };
-  const monthIndex = new Date().getDay() - 1;
+  const monthIndex = new Date().getDay();
   const getMonthName = () => {
     const month = [
       "Jan",
