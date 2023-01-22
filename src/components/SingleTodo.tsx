@@ -46,7 +46,7 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
           ref={inputRef}
         />
       )}
-      {!edit && todo.isDone && <S.SingleText>{todo.todo}</S.SingleText>}
+      {!edit && todo.isDone && <S.SingleTextStriked>{todo.todo}</S.SingleTextStriked>}
       {!edit && !todo.isDone && <S.SingleText>{todo.todo}</S.SingleText>}
       <div>
         <S.Icon
@@ -68,4 +68,5 @@ const SingleTodo = ({ todo, inputs, setInputs }: Props) => {
     </S.Single>
   );
 };
+
 export default SingleTodo;
