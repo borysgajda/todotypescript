@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//header
 export const Navigation = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   font-family: "Montserrat", sans-serif;
@@ -32,7 +31,6 @@ export const Image = styled.img`
   height: 100px;
 `;
 
-//input
 export const Input = styled.form`
   display: flex;
   width: 47.5%;
@@ -81,7 +79,6 @@ export const Box = styled.input`
 }
 `;
 
-//singletodo
 export const Single = styled.form`
   display: flex;
   border-radius: 5px;
@@ -117,13 +114,23 @@ export const SingleText = styled.span`
   }
 `;
 
+export const SingleTextStriked = styled.s`
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 export const Icon = styled.span`
   margin-left: 10px;
   font-size: 25px;
   cursor: pointer;
 `;
 
-//todolist
 export const Todos = styled.div`
   border-radius: 5px;
   display: flex;
@@ -132,7 +139,6 @@ export const Todos = styled.div`
   padding: 15px;
 `;
 
-//app
 export const Container = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   width: 100vw;
