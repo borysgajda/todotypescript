@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Navigation = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   font-family: "Montserrat", sans-serif;
