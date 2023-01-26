@@ -23,8 +23,6 @@ Using the list, we can edit our previous tasks, delete them and mark whether the
 
 At first you need to pull lastest branch from our GitHub repository to your local Git by git pull
 
-#### git pull
-
 Next step is to open files in Visual Studio Code
 
 ## Vercel
