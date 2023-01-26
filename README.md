@@ -21,4 +21,4 @@ Using the list, we can edit our previous tasks, delete them and mark whether the
 
 [Illustrative photo](https://tinypic.host/i/project.Kpw05)
 
-![alt text](https://tinypic.host/i/project.Kpw05)
+![alt](https://tinypic.host/i/project.Kpw05)
