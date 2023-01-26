@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# TODO list app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About project
 
-In the project directory, you can run:
+The todo list project was created for users who often forget about their daily duties or forget about important events in their lives.
 
-### `npm start`
+## Technology used in the application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React, TypeScript, Styled components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## App description
 
-### `npm test`
+I wrote the whole application using React and TypeScript languages which are based on JavaScript.
+To style my website I used the Styled Components library.
+In the header section, I included information about today's date and a photo of the calendar.
+In the next section, we are asked to enter a task.
+Then, using the button, add the entered task to the list below.
+Using the list, we can edit our previous tasks, delete them and mark whether they have already been completed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to start App
 
-### `npm run build`
+At first you need to pull lastest branch from our GitHub repository to your local Git by git pull
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### git pull
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Next step is to open files in Visual Studio Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Vercel
 
-### `npm run eject`
+### https://todotypescript-mu.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Illustrative photo](https://tinypic.host/i/project.Kpw05)
