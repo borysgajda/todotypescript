@@ -20,5 +20,3 @@ Then, using the button, add the entered task to the list below.
 Using the list, we can edit our previous tasks, delete them and mark whether they have already been completed.
 
 [Illustrative photo](https://tinypic.host/i/project.Kpw05)
-
-![alt](https://tinypic.host/i/project.Kpw05)
