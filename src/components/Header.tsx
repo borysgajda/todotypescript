@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "../styled";
 import myImage from "./calendar.png";
 import { LocalDate} from "./localDate";
-import "../styles/dummy.css";
 
 export const Header = () => {
   return (
