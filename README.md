@@ -25,6 +25,22 @@ At first you need to pull lastest branch from our GitHub repository to your loca
 
 Next step is to open files in Visual Studio Code
 
+### Build comand
+
+npm run build
+
+### Output directory
+
+build
+
+### Install Comand 
+
+yarn install
+
+### Development command
+
+react-scripts start
+
 ## Vercel
 
 ### https://todotypescript-mu.vercel.app/
