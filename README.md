@@ -43,6 +43,6 @@ react-scripts start
 
 ## Vercel
 
-### [https://todotypescript-mu.vercel.app/](https://borysgajda.github.io/todotypescript/)
+### [[https://todotypescript-mu.vercel.app/](https://borysgajda.github.io/todotypescript/)](https://todoapp-qsgcqyg7v-borysgajda.vercel.app/)
 
 [Illustrative photo](https://tinypic.host/i/project.Kpw05)
