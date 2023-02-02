@@ -1,6 +1,5 @@
 import styled from "styled-components";
 export const Navigation = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
@@ -140,7 +139,6 @@ export const Todos = styled.div`
 `;
 
 export const Container = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
   width: 100vw;
   min-height: 100vh;
   display: flex;
