@@ -33,14 +33,6 @@ npm run build
 
 build
 
-### Install Comand 
-
-yarn install
-
-### Development command
-
-react-scripts start
-
 ## Vercel
 
 ### https://todoapp-qsgcqyg7v-borysgajda.vercel.app/
