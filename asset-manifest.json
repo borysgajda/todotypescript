@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todotypescript/static/css/main.22aa42d5.css",
+    "main.js": "/todotypescript/static/js/main.7403c70c.js",
+    "index.html": "/todotypescript/index.html",
+    "main.22aa42d5.css.map": "/todotypescript/static/css/main.22aa42d5.css.map",
+    "main.7403c70c.js.map": "/todotypescript/static/js/main.7403c70c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22aa42d5.css",
+    "static/js/main.7403c70c.js"
+  ]
+}
